@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Profile Gossipe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <style>
+    header {
+      padding: 40px;
+
+    }
+    body {background-color: #e5e5e5 ;}
+    h1   {color: #157ffb;}
+    header a {
+      color: white;
+    }
+    div.gossip {
+      padding: 20px;
+      background-color: #e8e8e8;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+    p.gossip {
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-9">
+            <h1>The Gossip Project</h1>
+        </div>
+        <div class="col-md-3 header">
+          <a href="/" role="button" class="btn btn-primary CTA">Retour à l'acceuil</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section>
+    <center>
+      <p>Voici le numéro du gossip :</p>
+      <p> <%= @id %></p>
+      <p>Voici l'auteur du gossip :</p>
+      <p> <%= Gossip.find(@id)[0] %></p>
+      <p> Voici le contenu du gossip :</p>
+      <p> <%= Gossip.find(@id)[1] %></p>
+    </center>
+  </section>
+
+  </body>
+</html>

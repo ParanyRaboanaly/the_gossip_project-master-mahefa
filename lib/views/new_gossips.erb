@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Créer un potin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <style>
+    header {
+      padding: 40px;
+
+    }
+    body {background-color: #e5e5e5 ;}
+    h1   {color: #157ffb;}
+    h4 {color: #157ffb;}
+    header a {color: white;}
+    div.gossip {
+      padding: 20px;
+      background-color: #e8e8e8;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+    p.gossip {
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+    input {
+      border-radius: 5px;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-9">
+            <h1>The Gossip Project</h1>
+        </div>
+        <div class="col-md-3 header">
+          <a href="/" role="button" class="btn btn-primary CTA">Retour à l'acceuil</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section>
+    <center>
+    <h1>Créé un potin !</h1>
+    <p>Balance ton potin, BG</p>
+    <br>
+    <form action='/gossips/new' method='POST'>
+      <h4>
+        Ton potin :
+      </h4>
+      Balance ton blase :<br/> <input type='text' name='gossip_author'/><br/>
+      <br/>
+      Balance ton potin :<br/> <textarea name='gossip_content' cols="40" rows="5"/></textarea>
+      <br/>
+      <input class="btn btn-primary" type='submit'/>
+    </form>
+  </center>
+  </section>
+  </body>
+</html>
